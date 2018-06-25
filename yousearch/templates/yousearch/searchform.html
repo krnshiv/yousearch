@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Search</title>
+</head>
+<body>
+    <form action="/yousearch/" method="get">
+        <input type="text" name="q">
+        <input type="submit" value="Search">
+    </form>
+
+    {% if videos %}
+    <ul>
+        {% for video in videos %}
+        <li>{{ video }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>
